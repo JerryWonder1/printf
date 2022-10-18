@@ -27,7 +27,12 @@ int _printf(const char *format, ...)
 	{
 		character = *(format + i);
 		next_character = *(format + i + 1);
-		if (character == '%')
+		if (character == '%' && next_character == '%')
+		{
+			length += _putchar(next_character);
+			i++;
+		}
+		else if (character == '%')
 		{
 		        for (j = 0; print_type1[j].s; j++)
 			{
@@ -39,7 +44,10 @@ int _printf(const char *format, ...)
 			}
 
 			if (print_type1[j].s == NULL)
+			{
+				length += _putchar(character);
 				length += _putchar(next_character);
+			}
 
 			i++;
 		}
@@ -53,10 +61,10 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-
+/*
 			if (print_type2[j].s == NULL)
 				length += _putchar(next_character);
-
+*/
 			i++;
 		}
 		else
