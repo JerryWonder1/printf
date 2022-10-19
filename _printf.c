@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		next_character = *(format + i + 1);
 		if (character == '%')
 		{
-			print_substitution(&character, &next_character, args);
+			length += print_substitution(&character, &next_character, args);
 
 			i++;
 		}

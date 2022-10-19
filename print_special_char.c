@@ -15,10 +15,13 @@ int print_special_char(char *next_character, va_list args)
 		{NULL, NULL}
 	};
 
-	if (*next_character == '\\')
-		return (_putchar('\\'));
-
 	length = 0;
+
+	if (*next_character == '\\')
+	{
+		length += _putchar('\\');
+		return (length);
+	}
 
 	for (j = 0; print_type[j].s; j++)
 	{
@@ -27,6 +30,12 @@ int print_special_char(char *next_character, va_list args)
 			length += print_type[j].f(args);
 			break;
 		}
+	}
+
+	if (print_type[j].s == NULL)
+	{
+		length += _putchar('\\');
+		length += _putchar(*next_character);
 	}
 
 	return (length);
