@@ -15,7 +15,8 @@ int print_substitution(char *character, char *next_character, va_list args)
 	function_map print_type[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"n", print_newline},
+		{"d", print_int},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 

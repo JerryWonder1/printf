@@ -8,6 +8,8 @@ int _putchar(char x);
 int print_newline(va_list args);
 int print_char(va_list args);
 int print_string(va_list args);
+int print_int(va_list args);
+int print_num(int num);
 int _printf(const char *format, ...);
 int print_special_char(char *next_character, va_list args);
 int print_substitution(char *character, char *next_character, va_list args);
