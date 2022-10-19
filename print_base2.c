@@ -27,7 +27,7 @@ int print_base2(va_list args)
  */
 int print_in_base(int num, int base)
 {
-	int numCopy, i, numerator, remainder;
+	int numCopy, numerator, remainder;
 	int length = 0;
 
 	if (num < 0)
