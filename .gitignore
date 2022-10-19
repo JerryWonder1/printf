@@ -5,6 +5,6 @@
 '#*
 */tests/*
 tests/
-#*#
+*#
 .#*
 test*.c

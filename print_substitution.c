@@ -17,6 +17,7 @@ int print_substitution(char *character, char *next_character, va_list args)
 		{"s", print_string},
 		{"d", print_int},
 		{"i", print_int},
+		{"b", print_base2},
 		{NULL, NULL}
 	};
 
