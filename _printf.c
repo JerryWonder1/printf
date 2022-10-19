@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i, length;
+	unsigned long int i, length;
 	char character, next_character;
 
 	if (format == NULL)

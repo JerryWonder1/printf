@@ -9,7 +9,7 @@
  */
 int print_special_char(char *next_character, va_list args)
 {
-	int j, length;
+	unsigned long int j, length;
 	function_map print_type[] = {
 		{"n", print_newline},
 		{NULL, NULL}

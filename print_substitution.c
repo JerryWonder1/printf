@@ -11,7 +11,7 @@
  */
 int print_substitution(char *character, char *next_character, va_list args)
 {
-	int j, length;
+	unsigned long int j, length;
 	function_map print_type[] = {
 		{"c", print_char},
 		{"s", print_string},
