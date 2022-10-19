@@ -11,7 +11,7 @@ int print_string(va_list args);
 int print_int(va_list args);
 int print_num(int num);
 int print_base2(va_list args);
-int print_in_base(int num, int base);
+int print_in_base(unsigned int num, unsigned int base);
 int _printf(const char *format, ...);
 int print_special_char(char *next_character, va_list args);
 int print_substitution(char *character, char *next_character, va_list args);
