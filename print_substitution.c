@@ -19,7 +19,7 @@ int print_substitution(char *character, char *next_character, va_list args)
 		{"i", print_int},
 		{"b", print_base2},
 		{"o", print_base8},
-		{"u", print_int},
+		{"u", print_base10},
 		{"x", print_in_basex},
 		{"X", print_in_baseX},
 		{NULL, NULL}

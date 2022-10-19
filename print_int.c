@@ -10,7 +10,7 @@ int print_int(va_list args)
 {
 	int i, s;
 
-	s = va_arg(args, int);
+	s = va_arg(args, long int);
 
 	i = print_num(s);
 
@@ -23,7 +23,7 @@ int print_int(va_list args)
  * @num: the number to be printed
  * Return: the nunmber of characters printed
  */
-int print_num(int num)
+int print_num(long int num)
 {
 	int length = 0;
 
