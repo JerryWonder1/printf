@@ -13,9 +13,6 @@ int print_string(va_list args)
 
 	s = va_arg(args, char *);
 
-	if (s == NULL)
-		s = "(null)";
-
 	for (i = 0; s[i]; i++)
 		_putchar(s[i]);
 
