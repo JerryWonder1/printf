@@ -2,6 +2,7 @@
 #define FUNC
 
 #include <stdarg.h>
+#include <unistd.h>
 
 int _putchar(char x);
 int print_newline(va_list args);
