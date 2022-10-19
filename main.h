@@ -9,6 +9,8 @@ int print_newline(va_list args);
 int print_char(va_list args);
 int print_string(va_list args);
 int _printf(const char *format, ...);
+int print_special_char(char *next_character, va_list args);
+int print_substitution(char *character, char *next_character, va_list args);
 
 typedef struct print_map {
 	char *s;
