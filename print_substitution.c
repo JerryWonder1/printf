@@ -24,6 +24,7 @@ int make_substitution(char *character, char *next_character,
 		{"u", print_base10},
 		{"x", print_in_basex},
 		{"X", print_in_baseX},
+		{"S", print_string_all},
 		{NULL, NULL}
 	};
 

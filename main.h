@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
 
 #define BUFFSIZE 1024
 
@@ -10,6 +11,7 @@ int _putchar(char x);
 int print_newline(va_list args, char *buffer);
 int print_char(va_list args, char *buffer);
 int print_string(va_list args, char *buffer);
+int print_string_all(va_list args, char *buffer);
 int print_int(va_list args, char *buffer);
 int print_num(long int num, char *buffer);
 int print_base2(va_list args, char *buffer);
