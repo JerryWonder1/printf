@@ -57,6 +57,5 @@ size_t cleanup(char *buffer, va_list args)
 
 	length = print_buffer(buffer);
 	va_end(args);
-
 	return (length);
 }
