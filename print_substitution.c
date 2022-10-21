@@ -1,15 +1,17 @@
 #include "main.h"
 
 /**
- * print_substitution - intepretes directives and prints the appropraite
- *                      passed to the function
+ * make_substitution - intepretes directives and calles the
+ *                     appropraite function based on directive type
  *
  * @character: the character used to signify the directive ('%')
  * @next_character: the special character that follows the '%' symbol
  * @args: va_list object
+ * @buffer: buffer to write to
  * Return: the length of characters printed to screen
  */
-int print_substitution(char *character, char *next_character, va_list args)
+int make_substitution(char *character, char *next_character,
+		      va_list args, char *buffer)
 {
 	unsigned long int j, length;
 	function_map print_type[] = {
@@ -26,7 +28,10 @@ int print_substitution(char *character, char *next_character, va_list args)
 	};
 
 	if (*next_character == '%')
-		return (_putchar('%'));
+	{
+		add_to_buffer('%', buffer);
+		return (1);
+	}
 
 	length = 0;
 
@@ -34,15 +39,16 @@ int print_substitution(char *character, char *next_character, va_list args)
 	{
 		if (*(print_type[j].s) == *next_character)
 		{
-			length += print_type[j].f(args);
+			length += print_type[j].f(args, buffer);
 			break;
 		}
 	}
 
 	if (print_type[j].s == NULL)
 	{
-		length += _putchar(*character);
-		length += _putchar(*next_character);
+		add_to_buffer(*character, buffer);
+		add_to_buffer(*next_character, buffer);
+		length += 2;
 	}
 
 	return (length);
