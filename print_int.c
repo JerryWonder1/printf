@@ -13,6 +13,9 @@ int print_int(va_list args, char *buffer)
 
 	s = va_arg(args, long int);
 
+	if (s == '\0')
+		return (0);
+
 	i = print_num(s, buffer);
 
 	return (i);

@@ -15,7 +15,7 @@ int print_string(va_list args, char *buffer)
 	s = va_arg(args, char *);
 
 	if (s == NULL)
-		s = "(null)";
+		s = "(nil)";
 
 	for (i = 0; s[i]; i++)
 		add_to_buffer(s[i], buffer);
@@ -45,7 +45,7 @@ int print_string_all(va_list args, char *buffer)
 	s = va_arg(args, char *);
 
 	if (s == NULL)
-		s = "(null)";
+		s = "(nil)";
 
 	for (i = 0; s[i]; i++)
 	{
@@ -53,8 +53,7 @@ int print_string_all(va_list args, char *buffer)
 		{
 		        add_to_buffer('\\', buffer);
 			add_to_buffer('x', buffer);
-			printf("%d", s[i]);
-			if (s[i] < base)
+		        if (s[i] < base)
 				add_to_buffer('0', buffer);
 			print_in_base(s[i], base, &caps, buffer);
 		}

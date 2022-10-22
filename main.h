@@ -12,6 +12,7 @@ int print_newline(va_list args, char *buffer);
 int print_char(va_list args, char *buffer);
 int print_string(va_list args, char *buffer);
 int print_string_all(va_list args, char *buffer);
+int print_address(va_list args, char *buffer);
 int print_int(va_list args, char *buffer);
 int print_num(long int num, char *buffer);
 int print_base2(va_list args, char *buffer);
