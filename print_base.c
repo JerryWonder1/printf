@@ -40,6 +40,13 @@ int print_base2(va_list args, char *buffer)
 
 	s = va_arg(args, unsigned long int);
 
+	if (s == '\0')
+	{
+		i = write_nil_to_buffer(buffer);
+
+		return (i);
+	}
+
 	i = print_in_base(s, base, &caps, buffer);
 
 	return (i);
@@ -63,6 +70,13 @@ int print_base8(va_list args, char *buffer)
 	caps = 'n';
 
 	s = va_arg(args, unsigned long int);
+
+	if (s == '\0')
+	{
+		i = write_nil_to_buffer(buffer);
+
+		return (i);
+	}
 
 	i = print_in_base(s, base, &caps, buffer);
 
@@ -88,6 +102,13 @@ int print_in_baseX(va_list args, char *buffer)
 
 	s = va_arg(args, unsigned int);
 
+	if (s == '\0')
+	{
+		i = write_nil_to_buffer(buffer);
+
+		return (i);
+	}
+
 	i = print_in_base(s, base, &caps, buffer);
 
 	return (i);
@@ -111,6 +132,13 @@ int print_in_basex(va_list args, char *buffer)
 	caps = 'n';
 
 	s = va_arg(args, unsigned int);
+
+	if (s == '\0')
+	{
+		i = write_nil_to_buffer(buffer);
+
+		return (i);
+	}
 
 	i = print_in_base(s, base, &caps, buffer);
 

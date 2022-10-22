@@ -8,6 +8,8 @@
 #define BUFFSIZE 1024
 
 int _putchar(char x);
+size_t write_nil_to_buffer(char *buffer);
+size_t write_string_to_buffer(char *str, char *buffer);
 int print_newline(va_list args, char *buffer);
 int print_char(va_list args, char *buffer);
 int print_string(va_list args, char *buffer);

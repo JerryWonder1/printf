@@ -13,7 +13,7 @@ int print_address(va_list args, char *buffer)
 	unsigned long int s;
 	char caps, *null;
 
-	base = 16; /* Unprintable characters will be converted to base 16 */
+	base = 16; /* Base to be used for conversion */
 	caps = 'n'; /* Capital letters will be used for substitutions
                        in base conversion */
 
